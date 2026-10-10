@@ -382,6 +382,20 @@ section{position:relative;padding:clamp(80px,11vw,140px) 0}
 .who-cta{margin-top:34px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:18px;padding:22px 26px;border-radius:24px;background:var(--grad-soft);border:1px solid var(--line)}
 .who-cta p{color:var(--ink-2);max-width:52ch}
 .logo-name{white-space:nowrap}
+
+.photo-img{display:block;object-fit:cover;object-position:50% 30%;background:var(--bg-2)}
+.about-photo .arch img{width:100%;height:100%;object-fit:cover;object-position:50% 20%;display:block;transition:transform 1.2s var(--ease)}
+.about-photo:hover .arch img{transform:scale(1.04)}
+.story{position:relative;margin-top:22px;padding-left:22px;border-left:2px solid transparent;border-image:var(--grad) 1}
+.story p{margin-top:16px!important}
+.story p:first-child{margin-top:0!important}
+.story .turn{font-family:var(--f-display);font-size:clamp(20px,2vw,24px);font-weight:600;letter-spacing:-.02em;line-height:1.3;color:var(--ink)!important}
+.about-copy .pullq{margin:28px 0 6px;font-family:var(--f-serif);font-style:italic;font-size:clamp(26px,3vw,36px);line-height:1.2;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.facts{display:grid;gap:12px;margin:26px 0 8px}
+@media(min-width:620px){.facts{grid-template-columns:1fr 1fr}}
+.fact{padding:18px 20px;border-radius:18px;background:var(--card);border:1px solid var(--line);font-size:15.5px;color:var(--ink-2);transition:transform .4s var(--ease),border-color .3s}
+.fact:hover{transform:translateY(-4px);border-color:var(--coral)}
+.fact b{display:block;font-family:var(--f-display);font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--coral);margin-bottom:6px}
 /* faq */
 .faq-grid{display:grid;gap:40px}
 @media(min-width:960px){.faq-grid{grid-template-columns:.8fr 1.2fr;gap:80px}}
@@ -487,7 +501,7 @@ footer{padding:40px 0 120px;border-top:1px solid var(--line)}
 
 @media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition-duration:.01ms!important}.reveal,.reveal-scale{opacity:1}.hero h1 .w>span{transform:none}html{scroll-behavior:auto}}
 </style>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","name":"Tobiloba Murele – Web Design & Redesign","url":"https://tobiloba-murele-site-4d3q.vercel.app/","founder":{"@type":"Person","name":"Tobiloba Murele","jobTitle":"Freelance Web Designer"},"description":"Website design, website redesign, SEO and conversion optimization for businesses in every niche.","areaServed":"Worldwide","address":{"@type":"PostalAddress","addressLocality":"Lagos","addressCountry":"NG"},"telephone":"+2348158565347","email":"tobilobamurele@gmail.com","sameAs":["https://www.facebook.com/profile.php?id=100090585141190","https://www.instagram.com/ayaba.lewa","https://www.linkedin.com/in/murele-tobiloba-lewa/","https://www.upwork.com/freelancers/~01694e0bfb78459e20"],"serviceType":["Website redesign","Web design","SEO","Conversion rate optimization","Wix design","Framer design","WordPress design"]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","name":"Tobiloba Murele – Web Design & Redesign","url":"https://tobiloba-murele-site-4d3q.vercel.app/","founder":{"@type":"Person","name":"Tobiloba Murele","jobTitle":"Freelance Web Designer"},"description":"Website design, website redesign, SEO and conversion optimization for businesses in every niche.","areaServed":"Worldwide","telephone":"+2348158565347","email":"tobilobamurele@gmail.com","sameAs":["https://www.facebook.com/profile.php?id=100090585141190","https://www.instagram.com/ayaba.lewa","https://www.linkedin.com/in/murele-tobiloba-lewa/","https://www.upwork.com/freelancers/~01694e0bfb78459e20"],"serviceType":["Website redesign","Web design","SEO","Conversion rate optimization","Wix design","Framer design","WordPress design"]}</script>
 </head>
 <body>
 <div class="progress" id="progress"></div>
@@ -548,7 +562,7 @@ footer{padding:40px 0 120px;border-top:1px solid var(--line)}
 
     <div class="hero-visual reveal-scale" style="--d:.3s" id="heroVisual">
       <div class="photo-ring" data-depth="12">
-        <div class="ph photo"><div class="ph-in"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6"/></svg>Your photo here<br><small style="opacity:.7">Square, 1000 × 1000</small></div></div>
+        <img class="photo photo-img" src="assets/tobiloba-hero.jpg" alt="Tobiloba Murele, web designer" width="800" height="800" fetchpriority="high">
       </div>
       <div class="float-card fc-book" data-depth="26">
         <span class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18"/></svg></span>
@@ -771,7 +785,7 @@ footer{padding:40px 0 120px;border-top:1px solid var(--line)}
   <div class="container about-grid">
     <div class="about-photo reveal-scale">
       <div class="block"></div>
-      <div class="ph arch"><div class="ph-in"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6"/></svg>Your portrait here<br><small style="opacity:.7">Tall, 4:5</small></div></div>
+      <div class="arch"><img src="assets/tobiloba-about.jpg" alt="Portrait of Tobiloba Murele" width="720" height="900" loading="lazy"></div>
       <div class="badge" aria-hidden="true">
         <svg viewBox="0 0 108 108"><defs><path id="circ" d="M54,54 m-40,0 a40,40 0 1,1 80,0 a40,40 0 1,1 -80,0"/></defs><text font-size="9.5" letter-spacing="3" fill="currentColor" font-family="Inter"><textPath href="#circ">WEB DESIGN • SEO • CRO • BRANDING •</textPath></text></svg>
         <b>T</b>
@@ -779,10 +793,20 @@ footer{padding:40px 0 120px;border-top:1px solid var(--line)}
       <div class="name-tag"><b>Tobiloba Murele</b><span>Founder &amp; web designer</span></div>
     </div>
     <div class="about-copy">
-      <span class="eyebrow reveal">About me</span>
-      <h2 class="reveal" style="--d:.1s">Hi, I'm Tobiloba. I build sites that <span class="serif">feel like you.</span></h2>
-      <p class="reveal" style="--d:.2s">I'm a web designer from <strong>Lagos, Nigeria</strong>. I help small businesses, founders and brands in every niche, all over the world. Most of my work is taking an old website and making it new, fast and easy to book.</p>
-      <p class="reveal" style="--d:.25s">I believe a website is not just a pretty page. <strong>It is your best salesperson.</strong> It should welcome people, earn their trust and help them book with you, day and night.</p>
+      <span class="eyebrow reveal">My story</span>
+      <h2 class="reveal" style="--d:.1s">Why I help good businesses <span class="serif">get found.</span></h2>
+      <div class="story">
+        <p class="reveal" style="--d:.15s">A few years ago, I went through a dark season. Things kept going wrong, and I felt very alone. There was no one I could really talk to.</p>
+        <p class="reveal" style="--d:.2s">So, late at night, I typed my feelings into ChatGPT. It listened. It helped me think. It became a quiet friend. But it could not do what a real person can do. It could not truly <strong>understand</strong> me, guide me, or walk with me.</p>
+        <p class="turn reveal" style="--d:.25s">That is when it hit me: the help people need is already out there. They just can't find it.</p>
+        <p class="reveal" style="--d:.3s">Somewhere there is a coach who could change someone's life. A clinic that could ease someone's pain. A shop, a tutor, a builder or a small brand that is exactly what a stranger is searching for tonight. But they stay hidden behind old, slow, confusing websites, so that stranger never finds them.</p>
+        <p class="reveal" style="--d:.35s">I decided to change that. Today I design and redesign websites that help good businesses get <strong>seen, trusted and booked</strong>. Because when the right person finds you, both of your lives get better.</p>
+      </div>
+      <p class="pullq reveal">Every good business deserves to be found.</p>
+      <div class="facts">
+        <div class="fact reveal"><b>The name</b>Friends call me Lewa, a nickname from the footballer that just stuck.</div>
+        <div class="fact reveal" style="--d:.06s"><b>The teacher in me</b>I studied Physics and Education at Obafemi Awolowo University. So every page I build teaches one thing, clearly, in the right order.</div>
+      </div>
       <div class="promise">
         <div class="reveal" style="--d:0s"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-6"/></svg>You talk to me, not a stranger.</div>
         <div class="reveal" style="--d:.06s"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-6"/></svg>A clear price before we start.</div>
@@ -851,7 +875,7 @@ footer{padding:40px 0 120px;border-top:1px solid var(--line)}
       <details class="qa reveal"><summary>Can you redesign the site I already have?<span class="pm"></span></summary><div class="ans"><div><p>Yes! Most of my work is redesigns. I look at what works, keep it, and fix what doesn't. I also take care of your Google rankings so you don't lose them.</p></div></div></details>
       <details class="qa reveal"><summary>Which platform should my site be on?<span class="pm"></span></summary><div class="ans"><div><p>I build on Wix, Framer and WordPress. I help you pick the one that is easiest for you to use and best for your business. No pressure.</p></div></div></details>
       <details class="qa reveal"><summary>Do you write the words too?<span class="pm"></span></summary><div class="ans"><div><p>Yes. I can write clear, warm words that speak to your ideal client. Or I can polish the words you already have.</p></div></div></details>
-      <details class="qa reveal"><summary>I'm not in Nigeria. Is that a problem?<span class="pm"></span></summary><div class="ans"><div><p>Not at all. I work with clients in many countries. We talk on video calls, email and WhatsApp, and I plan around your time zone.</p></div></div></details>
+      <details class="qa reveal"><summary>Do you work with clients in my country?<span class="pm"></span></summary><div class="ans"><div><p>Yes. I work with clients all over the world. We talk on video calls, email and WhatsApp, and I plan around your time zone.</p></div></div></details>
       <details class="qa reveal"><summary>What happens after launch?<span class="pm"></span></summary><div class="ans"><div><p>I show you how to update your site. And I am still here if you need changes, new pages or help with SEO and social media.</p></div></div></details>
     </div>
   </div>
@@ -902,7 +926,7 @@ footer{padding:40px 0 120px;border-top:1px solid var(--line)}
     <div class="foot-top">
       <div>
         <a href="#top" class="logo"><span class="logo-mark"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAMAAACdt4HsAAAAllBMVEUAAAAYEQP7uiQbGhkIBgMSEhEXFhUCAgALCwxUPw5HMQjxsyT+xC0QCwIyJAghGQVQNwn3rxwrIAk+MxBfRQ5oUxjuqRvUig49KgbpoxgAAgl5WBKCaB64ih3hmBOkchH910XFegmWeCPFjxrjrypoSQt1SgiKXQ6rhiS3fxNGPBicZAxUSBu0aATPoCe5mDXKsEPqwkAvVN8qAAAACXBIWXMAAAsSAAALEgHS3X78AAADmUlEQVRYhe2W13LjMAxFQYkkqN6tajXLvSX//3M7lJzYzka2nJ19y31QG+IIAEGQAL/6v8IP/cwa7lA/sbb8QAujKNR9+hU4Qc4ujDQ3SJJAy9u21awXEAjoa5ptXb9YQTEvnOmBEDexvibRyk8FneiELc3v/ybfrPZkTyGg7XwbLiLsunACwbHGBiH4XfSUQOkD58A5aS/P560Q/IU/SkBw5tv5YjG/arFYbLfbm9QhuNWIOQCCbZpGu9T0XPE8ZZ24uhZtDM/Tb/6JsHYf5KjeEHkPlFnqXcb5ZzO4A5D1WJYQgjcKiHQAaED7GrLedve/9K1xwEEORQjMiwc94XAFIHEch/i3VX4n4sgrws5My/QzVOZfphYh6LquMzb26FTjB6CMYx2AHNrzeVNo/XKW6+FkKoq5eFApvRB2Stzs7eBc1+/t4TNkhLw1DMPMn5USQjA7rtan+r1YH5Nr/OAWumkY5tP1gBA0q3ndRZg0cXytImvDdhMB9r4zCwucJo7L7SVihCLKNNMwlAkAzTwlGQWyLcvSW/fjEXatmAZA0JUtE1xAFpRlKitKGtCNzzJNeQ5A8I1KMM4FCJF76Uzp+mZYRBmfBABcVBlnXBUguNgohmGeESFoBb94MNoR6OBAHlPK+QBgaqcoZl0ArWzBesBsHED67yROQHCuqgI4Y+JgmnVdB+4yYxfAJSffyKfSgVUFINQeYDugiraua7MLqWCMgabMRgEICZH3KpEAVQJ2AQiVvdWm4e0zIZh4AtAd2S4q+ulBGAFybr8rszINMyGoBKQPPNBlEa4AJUAmMcoBURWRkpZx42cUQfPGAQCOtPXdG0DRP4t2FjfNXm4Xmpems/HGviYARP8CAMb5Im6OewIIBy9N0zEAwjIEoPYFwD8AyEUQH+W6loCyLMc9cCocqkGofSnLHMgCU7MoluEhHNI4jkcBCOvlsCkLzhgXUFTDUMZELqcYISqbppGsMRcWMlCU9owJrfOWQ3VyJrlouXHcNMejO97Xow0gUEEppUg0V3eH/kuZvBLbdXWpy9dvCZs+b/8gOl9eu+hfB0REIOThSQmBbFejIxDA6beeB0Kwqr3cIL81txJnyhEv3+p/nU3lG01G038nBL+q9GGTuzkqEz20YZoQINlXuT7UgBR19OXSnj49KCs6XFf7db4Mw+Uqz1f6UIkvIQBJoruuq9uDKy+f13Hs5SVIr58Z/+pX8IL+AJt7Q0jsdUjQAAAAAElFTkSuQmCC" alt="" width="38" height="38"></span><span class="logo-name">Tobiloba Murele</span></a>
-        <p>Website design and redesign for every kind of business. Modern, fast sites that turn visitors into clients. Made with care in Lagos, for the world.</p>
+        <p>Website design and redesign for every kind of business. Modern, fast sites that turn visitors into clients. Made with care, for businesses everywhere.</p>
         <div class="socials">
           <a href="https://www.facebook.com/profile.php?id=100090585141190" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 8.5V6.8c0-.8.5-1 .9-1H17V2.1L14.1 2C10.9 2 10.2 4.4 10.2 6v2.5H8V12h2.2v10H14V12h2.9l.4-3.5z"/></svg></a>
           <a href="https://www.instagram.com/ayaba.lewa" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
@@ -915,7 +939,7 @@ footer{padding:40px 0 120px;border-top:1px solid var(--line)}
       <div class="foot-col"><h4>Say hello</h4><a href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ20hNqAFeUe-76tBWnhAPrqvsmqi5OwVInKAgfEfe3ueu2fSFPpU4Cz-Ul40JovI5_miDOK0wRP" target="_blank" rel="noopener" data-book>Book a free call</a><a href="#" data-wa target="_blank" rel="noopener">WhatsApp</a><a href="https://www.upwork.com/freelancers/~01694e0bfb78459e20" target="_blank" rel="noopener">Upwork</a><a href="mailto:tobilobamurele@gmail.com">tobilobamurele@gmail.com</a></div>
     </div>
     <div class="big-word reveal"><span>let's </span><span class="serif grad-text">talk.</span></div>
-    <div class="foot-bot"><span>© <span id="yr">2026</span> Tobiloba Murele. All rights reserved.</span><span>Designed &amp; built by Tobiloba, in Lagos.</span></div>
+    <div class="foot-bot"><span>© <span id="yr">2026</span> Tobiloba Murele. All rights reserved.</span><span>Designed &amp; built by Tobiloba Murele.</span></div>
   </div>
 </footer>
 
