@@ -614,6 +614,69 @@ footer{padding:40px 0 120px;border-top:1px solid var(--line)}
 .explore a{padding:11px 18px;border-radius:999px;background:var(--card);border:1px solid var(--line-2);font-weight:500;font-size:15px;transition:transform .4s var(--ease),border-color .3s}
 .explore a:hover{transform:translateY(-3px);border-color:var(--coral)}
 .faq-wrap{max-width:860px}
+
+/* ===== Light mode v2: calm paper, flat gold accents ===== */
+:root[data-theme="light"]{
+  --bg:#FAF8F4; --bg-2:#F1EDE5; --card:#FFFFFF; --glass:rgba(255,255,255,.82); --glass-line:rgba(17,17,17,.08);
+  --ink:#111111; --ink-2:#2B2925; --muted:#66625A; --line:rgba(17,17,17,.09); --line-2:rgba(17,17,17,.16);
+  --coral:#A87908; --coral-2:#ECB315; --violet:#8A6508; --violet-2:#C9960E; --on-accent:#111111;
+  --grad:linear-gradient(120deg,#F0BE2E 0%,#ECB315 100%);
+  --grad-soft:#F4EFE4;
+  --blob-a:rgba(236,179,21,.10); --blob-b:rgba(236,179,21,.06);
+  --shadow:0 1px 2px rgba(17,17,17,.04),0 8px 24px -14px rgba(17,17,17,.12);
+  --shadow-lg:0 2px 4px rgba(17,17,17,.04),0 24px 48px -24px rgba(17,17,17,.22);
+}
+:root[data-theme="light"] .grain{display:none}
+:root[data-theme="light"] .bg-blobs{opacity:.6}
+/* accent words: solid deep gold, no gradient text */
+:root[data-theme="light"] .grad-text,
+:root[data-theme="light"] .about-copy .pullq,
+:root[data-theme="light"] .rv-card .q,
+:root[data-theme="light"] .av-icon span,
+:root[data-theme="light"] .ph-av.av-icon span,
+:root[data-theme="light"] .cs-tag .serif,
+:root[data-theme="light"] .logo-mark b{background:none;-webkit-background-clip:border-box;background-clip:border-box;color:var(--coral)}
+/* buttons: flat gold, quiet shadow */
+:root[data-theme="light"] .btn-primary{background:#ECB315;box-shadow:0 1px 0 rgba(17,17,17,.06),0 8px 18px -10px rgba(168,121,8,.45)}
+:root[data-theme="light"] .btn-primary:hover{background:#E2A80B;box-shadow:0 1px 0 rgba(17,17,17,.06),0 12px 24px -12px rgba(168,121,8,.5)}
+:root[data-theme="light"] .btn-primary::after{display:none}
+:root[data-theme="light"] .svc .ic{background:#FBF3DC;color:#8A6508;box-shadow:inset 0 0 0 1px rgba(236,179,21,.35)}
+:root[data-theme="light"] .svc .tag{background:#111;color:#FFF}
+:root[data-theme="light"] .svc::before{background:radial-gradient(380px circle at var(--mx,50%) var(--my,50%),rgba(236,179,21,.07),transparent 45%)}
+/* featured service: light card instead of black */
+:root[data-theme="light"] .svc.feature{background:#FFFBEF;color:var(--ink);border:1px solid rgba(236,179,21,.45)}
+:root[data-theme="light"] .svc.feature p{color:var(--muted)}
+:root[data-theme="light"] .svc.feature li{background:rgba(17,17,17,.05);color:var(--ink-2)}
+:root[data-theme="light"] .who-cta{background:#FFFFFF}
+:root[data-theme="light"] .about-photo .block{background:#EFE6D0}
+:root[data-theme="light"] .photo-ring{background:#ECB315}
+/* project panels: soft paper tints, not heavy gold */
+:root[data-theme="light"] .bg1{background:#F3EBD7}
+:root[data-theme="light"] .bg2{background:#ECE9E3}
+:root[data-theme="light"] .bg3{background:#EFE6D6}
+:root[data-theme="light"] .bg4{background:#F5EFE2}
+:root[data-theme="light"] .scroll-hint{background:rgba(17,17,17,.82);color:#fff}
+/* booking section: light card instead of a black block */
+:root[data-theme="light"] .cta-card{background:#FFFFFF;color:var(--ink);border:1px solid var(--line);box-shadow:var(--shadow)}
+:root[data-theme="light"] .cta-card::before{background:radial-gradient(circle,rgba(236,179,21,.14),transparent 60%)}
+:root[data-theme="light"] .cta-card::after{display:none}
+:root[data-theme="light"] .cta-card h2 .serif{background:none;-webkit-background-clip:border-box;background-clip:border-box;color:var(--coral)}
+:root[data-theme="light"] .cta-card .lead{color:var(--muted)}
+:root[data-theme="light"] .cta-card .btn-ghost{color:var(--ink);border-color:var(--line-2);background:#fff}
+:root[data-theme="light"] .cta-card .btn-ghost:hover{border-color:var(--ink)}
+:root[data-theme="light"] .cta-card .btn-ghost .ico{background:var(--bg-2)}
+:root[data-theme="light"] .cta-card .btn-wa .ico{background:#25D366;color:#fff}
+:root[data-theme="light"] .cta-card .pill{background:var(--bg-2)!important;border-color:var(--line)!important;color:var(--ink)!important}
+:root[data-theme="light"] .cta-note{color:var(--muted)}
+:root[data-theme="light"] .form{background:var(--bg);border:1px solid var(--line);backdrop-filter:none;-webkit-backdrop-filter:none}
+:root[data-theme="light"] .form>p,:root[data-theme="light"] .form small{color:var(--muted)}
+:root[data-theme="light"] .field span{color:var(--ink-2)}
+:root[data-theme="light"] .field input,:root[data-theme="light"] .field select,:root[data-theme="light"] .field textarea{color:var(--ink);background:#fff;border-color:var(--line-2)}
+:root[data-theme="light"] .field input::placeholder,:root[data-theme="light"] .field textarea::placeholder{color:#9A958B}
+:root[data-theme="light"] .field input:focus,:root[data-theme="light"] .field select:focus,:root[data-theme="light"] .field textarea:focus{background:#fff;border-color:#ECB315;box-shadow:0 0 0 4px rgba(236,179,21,.16)}
+:root[data-theme="light"] .other-ways a{border-color:var(--line-2);color:var(--ink)}
+:root[data-theme="light"] .other-ways a:hover{background:var(--bg-2)}
+:root[data-theme="light"] .socials a:hover{background:#ECB315}
 </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebPage", "@id": "https://tobiloba-murele-site-4d3q.vercel.app/web-designer-auckland.html#webpage", "url": "https://tobiloba-murele-site-4d3q.vercel.app/web-designer-auckland.html", "name": "Web Designer for Auckland Businesses | Tobiloba Murele", "description": "Website design and redesign for Auckland and New Zealand businesses of every kind. Modern, mobile-first and SEO-ready. Free 30-min call.", "isPartOf": {"@id": "https://tobiloba-murele-site-4d3q.vercel.app/#website"}, "inLanguage": "en", "breadcrumb": {"@id": "https://tobiloba-murele-site-4d3q.vercel.app/web-designer-auckland.html#breadcrumb"}}, {"@type": "Service", "@id": "https://tobiloba-murele-site-4d3q.vercel.app/web-designer-auckland.html#service", "name": "Website design and redesign in Auckland and New Zealand", "serviceType": "Website design and redesign in Auckland and New Zealand", "provider": {"@id": "https://tobiloba-murele-site-4d3q.vercel.app/#business"}, "areaServed": [{"@type": "City", "name": "Auckland", "containedInPlace": {"@type": "Country", "name": "New Zealand"}}, {"@type": "City", "name": "Wellington"}, {"@type": "City", "name": "Christchurch"}, {"@type": "Country", "name": "New Zealand"}], "audience": {"@type": "BusinessAudience", "name": "Business owners in Auckland and New Zealand"}, "url": "https://tobiloba-murele-site-4d3q.vercel.app/web-designer-auckland.html", "description": "Website design and redesign for Auckland and New Zealand businesses of every kind. Modern, mobile-first and SEO-ready. Free 30-min call."}, {"@type": "FAQPage", "@id": "https://tobiloba-murele-site-4d3q.vercel.app/web-designer-auckland.html#faq", "mainEntity": [{"@type": "Question", "name": "Do I need to be in Auckland to work with you?", "acceptedAnswer": {"@type": "Answer", "text": "No. I work with businesses all over New Zealand, from Auckland to Wellington, Christchurch and beyond."}}, {"@type": "Question", "name": "Are you based in New Zealand?", "acceptedAnswer": {"@type": "Answer", "text": "I work remotely with New Zealand clients over video calls, email and WhatsApp. Most of my clients are overseas, and the process is smooth and simple."}}, {"@type": "Question", "name": "How much does a website cost?", "acceptedAnswer": {"@type": "Answer", "text": "It depends on what you need. On a free call, I listen first, then give you one clear price. No hidden fees."}}, {"@type": "Question", "name": "Can you help my business show up on Google Maps?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. I set up local SEO on your website and show you how to link it with your Google Business Profile, which powers Google Maps."}}, {"@type": "Question", "name": "How long does it take?", "acceptedAnswer": {"@type": "Answer", "text": "Most websites take 2 to 4 weeks. A redesign or polish can be faster."}}]}, {"@type": "BreadcrumbList", "@id": "https://tobiloba-murele-site-4d3q.vercel.app/web-designer-auckland.html#breadcrumb", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://tobiloba-murele-site-4d3q.vercel.app/"}, {"@type": "ListItem", "position": 2, "name": "Web designer for Auckland & NZ", "item": "https://tobiloba-murele-site-4d3q.vercel.app/web-designer-auckland.html"}]}, {"@type": "ProfessionalService", "@id": "https://tobiloba-murele-site-4d3q.vercel.app/#business", "name": "Tobiloba Murele – Web Design & Redesign", "url": "https://tobiloba-murele-site-4d3q.vercel.app/", "image": "https://tobiloba-murele-site-4d3q.vercel.app/assets/og-image.jpg", "logo": "https://tobiloba-murele-site-4d3q.vercel.app/assets/logo-tm.png", "telephone": "+2348158565347", "email": "tobilobamurele@gmail.com", "description": "Website design and redesign for every kind of business, worldwide, including New Zealand and Ireland.", "areaServed": [{"@type": "City", "name": "Auckland", "containedInPlace": {"@type": "Country", "name": "New Zealand"}}, {"@type": "Country", "name": "New Zealand"}, {"@type": "Country", "name": "Ireland"}], "sameAs": ["https://www.facebook.com/profile.php?id=100090585141190", "https://www.instagram.com/tobiloba_murele/", "https://www.linkedin.com/in/murele-tobiloba-lewa/", "https://www.upwork.com/freelancers/~01694e0bfb78459e20"], "founder": {"@id": "https://tobiloba-murele-site-4d3q.vercel.app/#person"}, "priceRange": "$$", "knowsAbout": ["Website design", "Website redesign", "Conversion rate optimization", "Local SEO", "Wix", "Framer", "WordPress"], "hasOfferCatalog": {"@type": "OfferCatalog", "name": "Web design services", "itemListElement": [{"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Website design"}}, {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Website redesign"}}, {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Local SEO"}}]}}]}</script>
 </head>

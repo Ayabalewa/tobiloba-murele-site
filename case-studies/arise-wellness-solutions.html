@@ -593,6 +593,69 @@ footer{padding:40px 0 120px;border-top:1px solid var(--line)}
 .cs-foot{padding:40px 0 110px;border-top:1px solid var(--line);margin-top:clamp(56px,7vw,96px)}
 @media(min-width:980px){.cs-foot{padding-bottom:40px}}
 .cs-foot .row{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;align-items:center;font-size:14px;color:var(--muted)}
+
+/* ===== Light mode v2: calm paper, flat gold accents ===== */
+:root[data-theme="light"]{
+  --bg:#FAF8F4; --bg-2:#F1EDE5; --card:#FFFFFF; --glass:rgba(255,255,255,.82); --glass-line:rgba(17,17,17,.08);
+  --ink:#111111; --ink-2:#2B2925; --muted:#66625A; --line:rgba(17,17,17,.09); --line-2:rgba(17,17,17,.16);
+  --coral:#A87908; --coral-2:#ECB315; --violet:#8A6508; --violet-2:#C9960E; --on-accent:#111111;
+  --grad:linear-gradient(120deg,#F0BE2E 0%,#ECB315 100%);
+  --grad-soft:#F4EFE4;
+  --blob-a:rgba(236,179,21,.10); --blob-b:rgba(236,179,21,.06);
+  --shadow:0 1px 2px rgba(17,17,17,.04),0 8px 24px -14px rgba(17,17,17,.12);
+  --shadow-lg:0 2px 4px rgba(17,17,17,.04),0 24px 48px -24px rgba(17,17,17,.22);
+}
+:root[data-theme="light"] .grain{display:none}
+:root[data-theme="light"] .bg-blobs{opacity:.6}
+/* accent words: solid deep gold, no gradient text */
+:root[data-theme="light"] .grad-text,
+:root[data-theme="light"] .about-copy .pullq,
+:root[data-theme="light"] .rv-card .q,
+:root[data-theme="light"] .av-icon span,
+:root[data-theme="light"] .ph-av.av-icon span,
+:root[data-theme="light"] .cs-tag .serif,
+:root[data-theme="light"] .logo-mark b{background:none;-webkit-background-clip:border-box;background-clip:border-box;color:var(--coral)}
+/* buttons: flat gold, quiet shadow */
+:root[data-theme="light"] .btn-primary{background:#ECB315;box-shadow:0 1px 0 rgba(17,17,17,.06),0 8px 18px -10px rgba(168,121,8,.45)}
+:root[data-theme="light"] .btn-primary:hover{background:#E2A80B;box-shadow:0 1px 0 rgba(17,17,17,.06),0 12px 24px -12px rgba(168,121,8,.5)}
+:root[data-theme="light"] .btn-primary::after{display:none}
+:root[data-theme="light"] .svc .ic{background:#FBF3DC;color:#8A6508;box-shadow:inset 0 0 0 1px rgba(236,179,21,.35)}
+:root[data-theme="light"] .svc .tag{background:#111;color:#FFF}
+:root[data-theme="light"] .svc::before{background:radial-gradient(380px circle at var(--mx,50%) var(--my,50%),rgba(236,179,21,.07),transparent 45%)}
+/* featured service: light card instead of black */
+:root[data-theme="light"] .svc.feature{background:#FFFBEF;color:var(--ink);border:1px solid rgba(236,179,21,.45)}
+:root[data-theme="light"] .svc.feature p{color:var(--muted)}
+:root[data-theme="light"] .svc.feature li{background:rgba(17,17,17,.05);color:var(--ink-2)}
+:root[data-theme="light"] .who-cta{background:#FFFFFF}
+:root[data-theme="light"] .about-photo .block{background:#EFE6D0}
+:root[data-theme="light"] .photo-ring{background:#ECB315}
+/* project panels: soft paper tints, not heavy gold */
+:root[data-theme="light"] .bg1{background:#F3EBD7}
+:root[data-theme="light"] .bg2{background:#ECE9E3}
+:root[data-theme="light"] .bg3{background:#EFE6D6}
+:root[data-theme="light"] .bg4{background:#F5EFE2}
+:root[data-theme="light"] .scroll-hint{background:rgba(17,17,17,.82);color:#fff}
+/* booking section: light card instead of a black block */
+:root[data-theme="light"] .cta-card{background:#FFFFFF;color:var(--ink);border:1px solid var(--line);box-shadow:var(--shadow)}
+:root[data-theme="light"] .cta-card::before{background:radial-gradient(circle,rgba(236,179,21,.14),transparent 60%)}
+:root[data-theme="light"] .cta-card::after{display:none}
+:root[data-theme="light"] .cta-card h2 .serif{background:none;-webkit-background-clip:border-box;background-clip:border-box;color:var(--coral)}
+:root[data-theme="light"] .cta-card .lead{color:var(--muted)}
+:root[data-theme="light"] .cta-card .btn-ghost{color:var(--ink);border-color:var(--line-2);background:#fff}
+:root[data-theme="light"] .cta-card .btn-ghost:hover{border-color:var(--ink)}
+:root[data-theme="light"] .cta-card .btn-ghost .ico{background:var(--bg-2)}
+:root[data-theme="light"] .cta-card .btn-wa .ico{background:#25D366;color:#fff}
+:root[data-theme="light"] .cta-card .pill{background:var(--bg-2)!important;border-color:var(--line)!important;color:var(--ink)!important}
+:root[data-theme="light"] .cta-note{color:var(--muted)}
+:root[data-theme="light"] .form{background:var(--bg);border:1px solid var(--line);backdrop-filter:none;-webkit-backdrop-filter:none}
+:root[data-theme="light"] .form>p,:root[data-theme="light"] .form small{color:var(--muted)}
+:root[data-theme="light"] .field span{color:var(--ink-2)}
+:root[data-theme="light"] .field input,:root[data-theme="light"] .field select,:root[data-theme="light"] .field textarea{color:var(--ink);background:#fff;border-color:var(--line-2)}
+:root[data-theme="light"] .field input::placeholder,:root[data-theme="light"] .field textarea::placeholder{color:#9A958B}
+:root[data-theme="light"] .field input:focus,:root[data-theme="light"] .field select:focus,:root[data-theme="light"] .field textarea:focus{background:#fff;border-color:#ECB315;box-shadow:0 0 0 4px rgba(236,179,21,.16)}
+:root[data-theme="light"] .other-ways a{border-color:var(--line-2);color:var(--ink)}
+:root[data-theme="light"] .other-ways a:hover{background:var(--bg-2)}
+:root[data-theme="light"] .socials a:hover{background:#ECB315}
 </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "CreativeWork", "@id": "https://tobiloba-murele-site-4d3q.vercel.app/case-studies/arise-wellness-solutions.html#work", "name": "Arise Wellness Solutions website design", "headline": "Arise Wellness Solutions Case Study | Tobiloba Murele, Web Designer", "description": "How Tobiloba Murele designed the Arise Wellness Solutions website: the problem, the solution, the design process and the result.", "url": "https://tobiloba-murele-site-4d3q.vercel.app/case-studies/arise-wellness-solutions.html", "image": "https://tobiloba-murele-site-4d3q.vercel.app/assets/work/thumb-arise.jpg", "creator": {"@id": "https://tobiloba-murele-site-4d3q.vercel.app/#person"}, "publisher": {"@id": "https://tobiloba-murele-site-4d3q.vercel.app/#business"}, "inLanguage": "en"}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://tobiloba-murele-site-4d3q.vercel.app/"}, {"@type": "ListItem", "position": 2, "name": "Case studies", "item": "https://tobiloba-murele-site-4d3q.vercel.app/#work"}, {"@type": "ListItem", "position": 3, "name": "Arise Wellness Solutions", "item": "https://tobiloba-murele-site-4d3q.vercel.app/case-studies/arise-wellness-solutions.html"}]}]}</script>
 </head>
