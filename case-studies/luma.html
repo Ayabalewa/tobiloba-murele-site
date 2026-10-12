@@ -759,7 +759,7 @@ footer{padding:40px 0 120px;border-top:1px solid var(--line)}
   var root=document.documentElement, reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
   document.querySelectorAll('[data-wa]').forEach(function(a){ a.href='https://wa.me/'+WHATSAPP+'?text='+encodeURIComponent(WA_TEXT); });
   var meta=document.querySelector('meta[name="theme-color"]');
-  function setMeta(){ meta.setAttribute('content', root.getAttribute('data-theme')==='dark' ? '#050505' : '#FFFBF2'); } setMeta();
+  function setMeta(){ meta.setAttribute('content', root.getAttribute('data-theme')==='dark' ? '#050505' : '#FAF8F4'); } setMeta();
   document.getElementById('themeToggle').addEventListener('click', function(){ var n=root.getAttribute('data-theme')==='dark'?'light':'dark'; root.setAttribute('data-theme',n); setMeta(); try{localStorage.setItem('tm-theme',n)}catch(e){} });
   document.getElementById('burger').addEventListener('click', function(){ document.body.classList.toggle('menu-open'); });
   document.querySelectorAll('#mobileMenu a').forEach(function(a){ a.addEventListener('click', function(){ document.body.classList.remove('menu-open'); }); });
