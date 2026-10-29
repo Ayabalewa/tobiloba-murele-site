@@ -1,6 +1,22 @@
 <!doctype html>
 <html lang="en">
 <head>
+  <!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '3242261852641856');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=3242261852641856&ev=PageView&noscript=1"/></noscript>
+<!-- End Meta Pixel Code -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Web Designer for Irish Businesses | Dublin, Cork &amp; Galway</title>
@@ -843,6 +859,15 @@ footer{padding:40px 0 120px;border-top:1px solid var(--line)}
     else if(a.hasAttribute('data-wa') || h.indexOf('wa.me') > -1) fbq('track', 'Contact');
   }, true);
 })();
+</script>
+  <script>
+document.addEventListener('click', function (e) {
+  var a = e.target.closest('a');
+  if (!a || !window.fbq) return;
+  var h = a.href || '';
+  if (h.indexOf('calendar.google.com') > -1) fbq('track', 'Schedule');
+  else if (h.indexOf('wa.me') > -1 || h.indexOf('mailto:') === 0) fbq('track', 'Contact');
+});
 </script>
 </body>
 </html>
